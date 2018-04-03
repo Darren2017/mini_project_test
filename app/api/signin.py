@@ -2,8 +2,9 @@
 from . import api
 from flask import jsonify, request
 from app import db
-from app.models import User, Role
+from app.models import User, Role, Article
 import json
+
 
 @api.route('/signin/', methods=['GET', 'POST'])
 def singin():

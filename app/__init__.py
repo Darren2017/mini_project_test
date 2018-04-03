@@ -15,5 +15,6 @@ app.config.from_object(config)
 #bootstrap = Bootstrap()
 db = SQLAlchemy(app)
 
+
 from .api import api
 app.register_blueprint(api, url_prefix='/api')

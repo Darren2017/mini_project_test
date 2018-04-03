@@ -1,13 +1,12 @@
 #encoding: utf-8
 
-import os
+
 import sys
-from flask_script import Manager, Shell
-#from hello import app
-#from db import DBManger
+import os
 from flask_migrate import Migrate, MigrateCommand
+from flask_script import Manager, Shell
 from app import db, app
-from app.models import User, Role
+from app.models import User, Article, Role
 
 manager = Manager(app)
 migrate = Migrate(app, db)
@@ -17,7 +16,8 @@ def make_shell_context():
         app = app,
         db = db,
         User = User,
-        Role = Role
+        Role = Role,
+        Article = Article
     )
 
 #manager.add_command('dbcreate', DBManger)

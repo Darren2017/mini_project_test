@@ -3,7 +3,7 @@
 from flask import jsonify, request
 from app import db
 from . import api
-from ..models import User, Role
+from ..models import User, Role, Article
 import json
 
 @api.route('/signup/', methods=['GET','POST'])
