@@ -1,6 +1,6 @@
 #encoding: utf-8
 from . import api
-from flask import jsonify, request
+from flask import jsonify, request, session
 from app import db
 from app.models import User, Role, Article
 import json
@@ -18,6 +18,8 @@ def singin():
         except:
             user = None
         if user is not None and user.verify_password(password):
+            session['user_id'] = user.id
+            session.permanent = True
             return jsonify({
                 "uid":user.id
             }), 200

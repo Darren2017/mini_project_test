@@ -13,6 +13,8 @@ HOST = '127.0.0.1'
 PORT = '3306'
 DATABASE = 'db_first_j'
 
+FLASKY_ADMIN = '17362990052@163.com'
+
 SQLALCHEMY_DATABASE_URI="{}+{}://{}:{}@{}:{}/{}?charset=utf8".format(DIALECT,
     DRIVER,USERNAME,PASSWORD,HOST,PORT,DATABASE)
 
