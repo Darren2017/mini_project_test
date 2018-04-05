@@ -8,6 +8,5 @@ from decorators import login_required
 
 
 @api.route('/')
-@login_required
 def index():
     return 'index'
